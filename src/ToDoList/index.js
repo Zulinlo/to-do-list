@@ -17,6 +17,11 @@ const ToDoList = () => {
     setTasks([...tasks, newTask]);
   }
 
+  // Dleete a track
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
+
   return (
     <div className='todo--container'>
       <div className='todo--panel'>
@@ -26,7 +31,7 @@ const ToDoList = () => {
         <ToDoPanel onAdd={addTask} />
       </div>
       <div className='todo--todos'>
-        {tasks.length > 0 ? (<ToDos tasks={tasks} />) : 'No Tasks' }
+        {tasks.length > 0 ? (<ToDos tasks={tasks} deleteTask={deleteTask} />) : 'No Tasks' }
       </div>
     </div>
   );
