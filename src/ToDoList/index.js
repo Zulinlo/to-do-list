@@ -10,9 +10,7 @@ const ToDoList = () => {
   // Add a task
   const addTask = (taskName) => {
     let id = Math.floor(Math.random() * 1000) + 1;
-    console.log(taskName);
     let newTask = {id, ...taskName};
-    console.log(newTask);
 
     setTasks([...tasks, newTask]);
   }
