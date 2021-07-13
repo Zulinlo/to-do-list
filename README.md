@@ -1,8 +1,6 @@
 # To Do List
 A simple to do list built with ReactJs hooks
 
-## Description
-
 ### Executing program
 
 ```bash
